@@ -1,0 +1,1331 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PUNTUALIX | Imagen Corporativa</title>
+
+  <link rel="icon" href="Inicio/Icono.png" type="image/x-icon">
+
+  <!-- FUENTE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+  <style>
+
+    /* =====================================
+       CONFIGURACIÓN GENERAL
+    ====================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      font-family: 'Poppins', Arial, sans-serif;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff8d6,
+          #ffffff,
+          #ffe5d0
+        );
+
+      color: #222;
+
+      overflow-x: hidden;
+
+    }
+
+
+    /* =====================================
+       FONDO ANIMADO
+    ====================================== */
+
+    body::before,
+    body::after {
+
+      content: "";
+
+      position: fixed;
+
+      width: 350px;
+
+      height: 350px;
+
+      border-radius: 50%;
+
+      filter: blur(80px);
+
+      opacity: 0.30;
+
+      z-index: -1;
+
+      animation:
+        moverFondo 8s infinite alternate ease-in-out;
+
+    }
+
+
+    body::before {
+
+      background: #ebfc01;
+
+      top: -120px;
+
+      left: -100px;
+
+    }
+
+
+    body::after {
+
+      background: #ffd804;
+
+      bottom: -120px;
+
+      right: -100px;
+
+      animation-delay: 2s;
+
+    }
+
+
+    @keyframes moverFondo {
+
+      from {
+        transform: translate(0, 0);
+      }
+
+      to {
+        transform: translate(80px, 50px);
+      }
+
+    }
+
+
+    /* =====================================
+       MENÚ
+    ====================================== */
+
+    .menu {
+
+      background:
+        linear-gradient(
+          90deg,
+           #0931e5,
+          #f52c12,
+          #1000f7
+        );
+
+      padding: 14px 20px;
+
+      text-align: center;
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+      box-shadow:
+        0 5px 20px rgba(0,0,0,0.20);
+
+      animation:
+        aparecerMenu 0.8s ease;
+
+    }
+
+
+    @keyframes aparecerMenu {
+
+      from {
+
+        transform: translateY(-100%);
+
+        opacity: 0;
+
+      }
+
+      to {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+      }
+
+    }
+
+
+    .menu ul {
+
+      list-style: none;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      gap: 7px;
+
+      flex-wrap: wrap;
+
+    }
+
+
+    .menu li {
+
+      list-style: none;
+
+    }
+
+
+    .menu a {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 7px;
+
+      text-decoration: none;
+
+      color: white;
+
+      font-weight: 600;
+
+      font-size: 14px;
+
+      padding: 10px 16px;
+
+      border-radius: 25px;
+
+      transition:
+        all 0.3s ease;
+
+    }
+
+
+    .menu a:hover {
+
+      background: #ffd804;
+
+      color: #222;
+
+      transform:
+        translateY(-3px)
+        scale(1.05);
+
+      box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.25);
+
+    }
+
+
+    /* =====================================
+       LOGO
+    ====================================== */
+
+    .logo-menu {
+
+      width: 30px;
+
+      height: 30px;
+
+      object-fit: contain;
+
+      border-radius: 50%;
+
+      background: white;
+
+      padding: 2px;
+
+      transition:
+        transform 0.5s ease;
+
+    }
+
+
+    .menu a:hover .logo-menu {
+
+      transform:
+        rotate(360deg)
+        scale(1.20);
+
+    }
+
+
+    /* =====================================
+       TÍTULO
+    ====================================== */
+
+    .titulo {
+
+      text-align: center;
+
+      margin:
+        45px 20px 25px;
+
+      animation:
+        aparecer 1s ease;
+
+    }
+
+
+    .titulo h1 {
+
+      font-size:
+        clamp(2.3rem, 6vw, 4.5rem);
+
+      font-weight: 800;
+
+      background:
+        linear-gradient(
+          90deg,
+          #0244fc,
+          #0026ff,
+          #1900ff
+        );
+
+      -webkit-background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+
+      letter-spacing: 2px;
+
+      animation:
+        brillo 3s infinite alternate;
+
+    }
+
+
+    .titulo p {
+
+      font-size: 18px;
+
+      font-weight: 600;
+
+      color: #444;
+
+      margin-top: 8px;
+
+    }
+
+
+    @keyframes brillo {
+
+      from {
+
+        filter:
+          drop-shadow(
+            0 0 3px
+            rgba(255,0,0,0.20)
+          );
+
+      }
+
+      to {
+
+        filter:
+          drop-shadow(
+            0 0 15px
+            rgba(255,160,0,0.60)
+          );
+
+      }
+
+    }
+
+
+    @keyframes aparecer {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(30px);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0);
+
+      }
+
+    }
+
+
+    /* =====================================
+       PRESENTACIÓN
+    ====================================== */
+
+    .presentacion {
+
+      width: min(90%, 950px);
+
+      margin: 30px auto;
+
+      padding: 35px;
+
+      background:
+        rgba(255,255,255,0.88);
+
+      backdrop-filter: blur(10px);
+
+      border-radius: 25px;
+
+      text-align: center;
+
+      box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.13);
+
+      animation:
+        aparecer 1.2s ease;
+
+    }
+
+
+    .presentacion h2 {
+
+      color: #091fe5;
+
+      font-size: 30px;
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .presentacion p {
+
+      line-height: 1.8;
+
+      font-size: 16px;
+
+    }
+
+
+    /* =====================================
+       GALERÍA
+    ====================================== */
+
+    .galeria {
+
+      width: min(95%, 1100px);
+
+      margin: 45px auto;
+
+      text-align: center;
+
+    }
+
+
+    .galeria h2 {
+
+      color: #1809e5;
+
+      font-size: 30px;
+
+      margin-bottom: 20px;
+
+    }
+
+
+    .visor {
+
+      width: 100%;
+
+      min-height: 400px;
+
+      padding: 20px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      background:
+        rgba(255,255,255,0.85);
+
+      border-radius: 25px;
+
+      box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.15);
+
+      overflow: hidden;
+
+    }
+
+
+    .corporativa {
+
+      display: none;
+
+      max-width: 100%;
+
+      max-height: 650px;
+
+      width: auto;
+
+      height: auto;
+
+      border-radius: 18px;
+
+      object-fit: contain;
+
+      box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.25);
+
+    }
+
+
+    .corporativa.active {
+
+      display: block;
+
+      animation:
+        aparecerImagen 0.6s ease;
+
+    }
+
+
+    @keyframes aparecerImagen {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          scale(0.93)
+          translateY(15px);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          scale(1)
+          translateY(0);
+
+      }
+
+    }
+
+
+    /* =====================================
+       BOTONES
+    ====================================== */
+
+    .botones {
+
+      margin-top: 25px;
+
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+    }
+
+
+    .botones button {
+
+      cursor: pointer;
+
+      padding: 12px 18px;
+
+      border: none;
+
+      border-radius: 25px;
+
+      background: #555;
+
+      color: white;
+
+      font-family: 'Poppins', sans-serif;
+
+      font-weight: 600;
+
+      font-size: 13px;
+
+      transition:
+        all 0.3s ease;
+
+    }
+
+
+    .botones button:hover {
+
+      background:
+        linear-gradient(
+          90deg,
+          #0011ff,
+          #ffd000
+        );
+
+      color: #222;
+
+      transform:
+        translateY(-4px)
+        scale(1.05);
+
+      box-shadow:
+        0 6px 15px
+        rgba(0,0,0,0.20);
+
+    }
+
+
+    .botones button.active {
+
+      background:
+        linear-gradient(
+          90deg,
+          #1809e5,
+          #fbff00
+        );
+
+      color: white;
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 5px 15px
+        rgba(229,9,9,0.30);
+
+    }
+
+
+    /* =====================================
+       BOTÓN INICIO
+    ====================================== */
+
+    .boton-inicio {
+
+      display: inline-block;
+
+      margin-top: 30px;
+
+      padding: 13px 30px;
+
+      border-radius: 30px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #2a09e5,
+          #fbff00
+        );
+
+      color: white;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      box-shadow:
+        0 7px 20px
+        rgba(229,9,9,0.35);
+
+      transition:
+        all 0.3s ease;
+
+    }
+
+
+    .boton-inicio:hover {
+
+      transform:
+        translateY(-5px)
+        scale(1.05);
+
+      background:
+        linear-gradient(
+          90deg,
+          #ff6b00,
+          #ffd000
+        );
+
+      color: #222;
+
+    }
+
+
+    /* =====================================
+       FOOTER
+    ====================================== */
+
+    footer {
+
+      margin-top: 70px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #171717,
+          #292929
+        );
+
+      color: white;
+
+      text-align: center;
+
+      padding: 40px 20px;
+
+    }
+
+
+    footer p {
+
+      margin: 10px 0;
+
+      font-size: 14px;
+
+    }
+
+
+    .social-icons {
+
+      margin: 25px 0;
+
+    }
+
+
+    .social-icons a {
+
+      display: inline-block;
+
+      margin: 0 8px;
+
+      padding: 8px;
+
+      border-radius: 50%;
+
+      transition:
+        transform 0.3s,
+        background 0.3s;
+
+    }
+
+
+    .social-icons a:hover {
+
+      background: #ffd000;
+
+      transform:
+        translateY(-7px)
+        rotate(8deg);
+
+    }
+
+
+    .social-icons img {
+
+      width: 45px;
+
+      height: 45px;
+
+      object-fit: contain;
+
+    }
+
+
+    footer a {
+
+      color: #ffd000;
+
+      text-decoration: none;
+
+      transition: 0.3s;
+
+    }
+
+
+    footer a:hover {
+
+      color: #ff6b00;
+
+      text-decoration: underline;
+
+    }
+
+
+    /* =====================================
+       BOTÓN ARRIBA
+    ====================================== */
+
+    .arriba {
+
+      position: fixed;
+
+      right: 25px;
+
+      bottom: 25px;
+
+      width: 50px;
+
+      height: 50px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      background: #e50909;
+
+      color: white;
+
+      border-radius: 50%;
+
+      text-decoration: none;
+
+      font-size: 22px;
+
+      box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.30);
+
+      transition: 0.3s;
+
+      z-index: 999;
+
+    }
+
+
+    .arriba:hover {
+
+      background: #ffd000;
+
+      color: #222;
+
+      transform:
+        translateY(-5px);
+
+    }
+
+
+    /* =====================================
+       RESPONSIVE
+    ====================================== */
+
+    @media (max-width: 768px) {
+
+      .menu ul {
+
+        flex-direction: column;
+
+      }
+
+
+      .menu a {
+
+        width: 100%;
+
+      }
+
+
+      .titulo h1 {
+
+        font-size: 2.8rem;
+
+      }
+
+
+      .presentacion {
+
+        padding: 25px 15px;
+
+      }
+
+
+      .visor {
+
+        min-height: 250px;
+
+      }
+
+
+      .botones button {
+
+        width: 90%;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body id="inicio">
+
+
+  <!-- =====================================
+       MENÚ
+  ====================================== -->
+
+  <nav class="menu">
+
+    <ul>
+
+
+      <li>
+
+        <a href="Inicio.html">
+
+          🏠 Inicio
+
+        </a>
+
+      </li>
+
+
+      <li>
+
+        <a href="Nombre_Proyecto.html">
+
+          <img
+            src="Inicio/LOGO.jpg"
+            class="logo-menu"
+            alt="Logo PUNTUALIX"
+          >
+
+          <span>
+            PUNTUALIX
+          </span>
+
+        </a>
+
+      </li>
+
+
+      <li>
+
+        <a href="Imagen_Corporativa.html">
+
+          🎨 Imagen Corporativa
+
+        </a>
+
+      </li>
+
+
+      <li>
+
+        <a href="Contenidos.html">
+
+          📚 Contenidos
+
+        </a>
+
+      </li>
+
+
+      <li>
+
+        <a href="Quienes_Somos.html">
+
+          👥 Quiénes Somos
+
+        </a>
+
+      </li>
+
+
+      <li>
+
+        <a href="Contactanos.html">
+
+          📩 Contáctanos
+
+        </a>
+
+      </li>
+
+
+    </ul>
+
+  </nav>
+
+
+  <!-- =====================================
+       TÍTULO
+  ====================================== -->
+
+  <section class="titulo">
+
+    <h1>
+      IMAGEN CORPORATIVA
+    </h1>
+
+    <p>
+      
+    </p>
+
+  </section>
+
+
+  <!-- =====================================
+       PRESENTACIÓN
+  ====================================== -->
+
+  <section class="presentacion">
+
+    <h2>
+      ✨ Nuestra Identidad
+    </h2>
+
+    <p>
+
+      La imagen corporativa de PUNTUALIX
+      representa nuestra identidad, nuestros
+      valores y la importancia de aprovechar
+      correctamente el tiempo.
+
+      <br><br>
+
+      En esta sección podrás conocer los
+      principales elementos visuales que
+      representan nuestro proyecto.
+
+    </p>
+
+  </section>
+
+
+  <!-- =====================================
+       GALERÍA
+  ====================================== -->
+
+  <section class="galeria">
+
+    <h2>
+      🖼️ Elementos de la Imagen Corporativa
+    </h2>
+
+
+    <div class="visor">
+
+
+      
+
+      <img
+        src="Imagen Corporativa/Logo.png"
+        class="corporativa active"
+        alt="Logo PUNTUALIX"
+      >
+
+
+      <img
+        src="Imagen Corporativa/Colores.png"
+        class="corporativa"
+        alt="Colores corporativos"
+      >
+
+
+      <img
+        src="Imagen Corporativa/Tipografia.png"
+        class="corporativa"
+        alt="Tipografía corporativa"
+      >
+
+
+      <img
+        src="Imagen Corporativa/Slogan.png"
+        class="corporativa"
+        alt="Slogan PUNTUALIX"
+      >
+
+
+      <img
+        src="Imagen Corporativa/Mascota.png"
+        class="corporativa"
+        alt="Mascota PUNTUALIX"
+      >
+
+
+    </div>
+
+
+    <!-- =====================================
+         BOTONES DE SELECCIÓN
+    ====================================== -->
+
+    <div class="botones">
+
+
+      <button
+        onclick="mostrarImagen(0)"
+        class="active"
+      >
+         Logo
+      </button>
+
+
+      <button
+        onclick="mostrarImagen(1)"
+      >
+        🎨 Colores
+      </button>
+
+
+      <button
+        onclick="mostrarImagen(2)"
+      >
+         Tipografía
+      </button>
+
+
+      <button
+        onclick="mostrarImagen(3)"
+      >
+        💬 Slogan
+      </button>
+
+
+      <button
+        onclick="mostrarImagen(4)"
+      >
+        ⏱️ Mascota
+      </button>
+
+
+    </div>
+
+
+    <a
+      href="Inicio.html"
+      class="boton-inicio"
+    >
+
+      🏠 Volver al Inicio
+
+    </a>
+
+
+  </section>
+
+
+  <!-- =====================================
+       FOOTER
+  ====================================== -->
+
+  <footer>
+
+
+    <p>
+
+      Conoce más de nosotros...
+
+      <strong>
+        ¡Visita nuestras Redes Sociales!
+      </strong>
+
+    </p>
+
+
+    <div class="social-icons">
+
+
+      <a
+        href="https://www.facebook.com/?locale=es_LA"
+        target="_blank"
+      >
+
+        <img
+          src="Redes Sociales/facebook.png"
+          alt="Facebook"
+        >
+
+      </a>
+
+
+      <a
+        href="https://www.google.com/?hl=es"
+        target="_blank"
+      >
+
+        <img
+          src="Redes Sociales/Google.png"
+          alt="Google"
+        >
+
+      </a>
+
+
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+      >
+
+        <img
+          src="Redes Sociales/Instagram.png"
+          alt="Instagram"
+        >
+
+      </a>
+
+
+      <a
+        href="https://identity.flickr.com/login"
+        target="_blank"
+      >
+
+        <img
+          src="Redes Sociales/Whatsapp.png"
+          alt="WhatsApp"
+        >
+
+      </a>
+
+
+    </div>
+
+
+    <p>
+
+      &copy; 2026 - Educación Media
+      del Colegio Venecia IED.
+
+      Todos los derechos reservados.
+
+      |
+
+      <a
+        href="https://www.mintic.gov.co/portal/inicio/Secciones-auxiliares/Politicas/2627:Politicas-de-Privacidad-y-Condiciones-de-Uso"
+        target="_blank"
+      >
+        Política de Privacidad
+      </a>
+
+      |
+
+      <a
+        href="https://www.sic.gov.co/politica-privacidad"
+        target="_blank"
+      >
+        Términos y Condiciones
+      </a>
+
+    </p>
+
+
+  </footer>
+
+
+  <!-- =====================================
+       BOTÓN ARRIBA
+  ====================================== -->
+
+  <a
+    href="#inicio"
+    class="arriba"
+    title="Volver arriba"
+  >
+
+    ↑
+
+  </a>
+
+
+  <!-- =====================================
+       JAVASCRIPT
+  ====================================== -->
+
+  <script>
+
+
+    const imagenes =
+      document.querySelectorAll(
+        ".corporativa"
+      );
+
+
+    const botones =
+      document.querySelectorAll(
+        ".botones button"
+      );
+
+
+    function mostrarImagen(numero) {
+
+
+      imagenes.forEach(
+        imagen => {
+
+          imagen.classList.remove(
+            "active"
+          );
+
+        }
+      );
+
+
+      botones.forEach(
+        boton => {
+
+          boton.classList.remove(
+            "active"
+          );
+
+        }
+      );
+
+
+      imagenes[numero].classList.add(
+        "active"
+      );
+
+
+      botones[numero].classList.add(
+        "active"
+      );
+
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>
+```

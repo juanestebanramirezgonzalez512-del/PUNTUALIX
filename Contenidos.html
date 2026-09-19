@@ -1,0 +1,1484 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PUNTUALIX | Contenidos</title>
+
+  <link rel="icon" href="Inicio/Icono.png" type="image/x-icon">
+
+  <!-- FUENTE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+  <style>
+
+    /* =====================================
+       CONFIGURACIÓN GENERAL
+    ====================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      font-family: 'Poppins', Arial, sans-serif;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff8d6,
+          #ffffff,
+          #ffe5d0
+        );
+
+      color: #222;
+
+      overflow-x: hidden;
+
+    }
+
+
+    /* =====================================
+       FONDO ANIMADO
+    ====================================== */
+
+    body::before,
+    body::after {
+
+      content: "";
+
+      position: fixed;
+
+      width: 350px;
+
+      height: 350px;
+
+      border-radius: 50%;
+
+      filter: blur(80px);
+
+      opacity: 0.30;
+
+      z-index: -1;
+
+      animation:
+        moverFondo 8s infinite alternate ease-in-out;
+
+    }
+
+
+    body::before {
+
+      background: #fbff02;
+
+      top: -120px;
+
+      left: -100px;
+
+    }
+
+
+    body::after {
+
+      background: #ffd804;
+
+      bottom: -120px;
+
+      right: -100px;
+
+      animation-delay: 2s;
+
+    }
+
+
+    @keyframes moverFondo {
+
+      from {
+        transform: translate(0, 0);
+      }
+
+      to {
+        transform: translate(80px, 50px);
+      }
+
+    }
+
+
+    /* =====================================
+       MENÚ
+    ====================================== */
+
+    .menu {
+
+      background:
+        linear-gradient(
+          90deg,
+          #0931e5,
+          #f52c12,
+          #1000f7
+        );
+
+      padding: 14px 20px;
+
+      text-align: center;
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+      box-shadow:
+        0 5px 20px rgba(0,0,0,0.20);
+
+      animation:
+        aparecerMenu 0.8s ease;
+
+    }
+
+
+    @keyframes aparecerMenu {
+
+      from {
+
+        transform: translateY(-100%);
+
+        opacity: 0;
+
+      }
+
+      to {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+      }
+
+    }
+
+
+    .menu ul {
+
+      list-style: none;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      gap: 7px;
+
+      flex-wrap: wrap;
+
+    }
+
+
+    .menu li {
+
+      list-style: none;
+
+    }
+
+
+    .menu a {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 7px;
+
+      text-decoration: none;
+
+      color: white;
+
+      font-weight: 600;
+
+      font-size: 14px;
+
+      padding: 10px 16px;
+
+      border-radius: 25px;
+
+      transition:
+        all 0.3s ease;
+
+    }
+
+
+    .menu a:hover {
+
+      background: #ffd804;
+
+      color: #222;
+
+      transform:
+        translateY(-3px)
+        scale(1.05);
+
+      box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.25);
+
+    }
+
+
+    /* =====================================
+       LOGO PUNTUALIX
+    ====================================== */
+
+    .logo-menu {
+
+      width: 30px;
+
+      height: 30px;
+
+      object-fit: contain;
+
+      border-radius: 50%;
+
+      background: white;
+
+      padding: 2px;
+
+      transition:
+        transform 0.5s ease;
+
+    }
+
+
+    .menu a:hover .logo-menu {
+
+      transform:
+        rotate(360deg)
+        scale(1.20);
+
+    }
+
+
+    /* =====================================
+       TÍTULO
+    ====================================== */
+
+    .titulo {
+
+      text-align: center;
+
+      margin:
+        45px 20px 20px;
+
+      animation:
+        aparecer 1s ease;
+
+    }
+
+
+    .titulo h1 {
+
+      font-size:
+        clamp(2.3rem, 6vw, 4.5rem);
+
+      font-weight: 800;
+
+      background:
+        linear-gradient(
+          90deg,
+          #0918e5,
+          #1900ff,
+          #ffd000
+        );
+
+      -webkit-background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+
+      letter-spacing: 2px;
+
+      animation:
+        brillo 3s infinite alternate;
+
+    }
+
+
+    .titulo p {
+
+      font-size: 18px;
+
+      font-weight: 600;
+
+      color: #444;
+
+      margin-top: 8px;
+
+    }
+
+
+    @keyframes brillo {
+
+      from {
+
+        filter:
+          drop-shadow(
+            0 0 3px
+            rgba(255,0,0,0.20)
+          );
+
+      }
+
+      to {
+
+        filter:
+          drop-shadow(
+            0 0 15px
+            rgba(255,160,0,0.60)
+          );
+
+      }
+
+    }
+
+
+    @keyframes aparecer {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(30px);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0);
+
+      }
+
+    }
+
+
+    /* =====================================
+       PRESENTACIÓN
+    ====================================== */
+
+    .intro {
+
+      width: min(90%, 950px);
+
+      margin: 35px auto;
+
+      padding: 35px;
+
+      text-align: center;
+
+      background:
+        rgba(255,255,255,0.88);
+
+      backdrop-filter: blur(10px);
+
+      border-radius: 25px;
+
+      box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.13);
+
+      animation:
+        aparecer 1.2s ease;
+
+    }
+
+
+    .intro h2 {
+
+      color: #0944e5;
+
+      font-size: 30px;
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .intro p {
+
+      line-height: 1.8;
+
+      font-size: 16px;
+
+    }
+
+
+    /* =====================================
+       TARJETAS
+    ====================================== */
+
+    .contenidos {
+
+      width: min(95%, 1100px);
+
+      margin: 45px auto;
+
+      text-align: center;
+
+    }
+
+
+    .contenidos h2 {
+
+      color: #0944e5;
+
+      font-size: 30px;
+
+      margin-bottom: 25px;
+
+    }
+
+
+    .grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(250px, 1fr)
+        );
+
+      gap: 25px;
+
+    }
+
+
+    .tarjeta {
+
+      background:
+        rgba(255,255,255,0.90);
+
+      border-radius: 22px;
+
+      padding: 30px 22px;
+
+      min-height: 240px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      align-items: center;
+
+      box-shadow:
+        0 10px 25px
+        rgba(0,0,0,0.12);
+
+      border: 3px solid transparent;
+
+      transition:
+        all 0.4s ease;
+
+      animation:
+        aparecerTarjeta 0.8s ease;
+
+    }
+
+
+    .tarjeta:hover {
+
+      transform:
+        translateY(-10px)
+        scale(1.03);
+
+      border-color: #ff6b00;
+
+      box-shadow:
+        0 18px 35px
+        rgba(229,9,9,0.22);
+
+    }
+
+
+    .icono {
+
+      font-size: 50px;
+
+      margin-bottom: 15px;
+
+      transition:
+        transform 0.4s ease;
+
+    }
+
+
+    .tarjeta:hover .icono {
+
+      transform:
+        rotate(10deg)
+        scale(1.2);
+
+    }
+
+
+    .tarjeta h3 {
+
+      color: #094fe5;
+
+      font-size: 21px;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .tarjeta p {
+
+      color: #555;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+    }
+
+
+    @keyframes aparecerTarjeta {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(30px);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0);
+
+      }
+
+    }
+
+
+    /* =====================================
+       BOTÓN APLICACIÓN
+    ====================================== */
+
+    .boton-app {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      margin-top: 18px;
+
+      padding: 13px 25px;
+
+      border-radius: 30px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #e50909,
+          #ff6b00
+        );
+
+      color: white;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      box-shadow:
+        0 7px 20px
+        rgba(229,9,9,0.30);
+
+      transition:
+        all 0.3s ease;
+
+    }
+
+
+    .boton-app:hover {
+
+      transform:
+        translateY(-5px)
+        scale(1.06);
+
+      background:
+        linear-gradient(
+          90deg,
+          #0011ff,
+          #ffd000
+        );
+
+      color: #222;
+
+    }
+
+
+    /* =====================================
+       SECCIÓN PRINCIPAL DE LA APP
+    ====================================== */
+
+    .app-section {
+
+      width: min(92%, 1000px);
+
+      margin: 50px auto;
+
+      padding: 45px 30px;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(31, 9, 229, 0.95),
+          rgba(255,107,0,0.95),
+          rgba(0, 17, 255, 0.95)
+        );
+
+      border-radius: 30px;
+
+      color: white;
+
+      box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.25);
+
+      animation:
+        aparecer 1.3s ease;
+
+    }
+
+
+    .app-section h2 {
+
+      font-size:
+        clamp(2rem, 5vw, 3rem);
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .app-section p {
+
+      max-width: 750px;
+
+      margin:
+        0 auto 25px;
+
+      line-height: 1.8;
+
+      font-size: 16px;
+
+    }
+
+
+    .app-button {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      padding: 15px 35px;
+
+      background: white;
+
+      color: #e50909;
+
+      border-radius: 35px;
+
+      text-decoration: none;
+
+      font-weight: 800;
+
+      font-size: 17px;
+
+      box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.25);
+
+      transition:
+        all 0.4s ease;
+
+    }
+
+
+    .app-button:hover {
+
+      transform:
+        scale(1.08)
+        translateY(-5px);
+
+      background: #222;
+
+      color: #ffd000;
+
+    }
+
+
+    /* =====================================
+       INFORMACIÓN
+    ====================================== */
+
+    .info {
+
+      width: min(90%, 950px);
+
+      margin: 45px auto;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(230px, 1fr)
+        );
+
+      gap: 20px;
+
+    }
+
+
+    .info-box {
+
+      background:
+        rgba(255,255,255,0.90);
+
+      padding: 25px;
+
+      border-radius: 20px;
+
+      text-align: center;
+
+      box-shadow:
+        0 8px 20px
+        rgba(0,0,0,0.10);
+
+      transition:
+        all 0.3s ease;
+
+    }
+
+
+    .info-box:hover {
+
+      transform:
+        translateY(-7px);
+
+      box-shadow:
+        0 15px 30px
+        rgba(0,0,0,0.18);
+
+    }
+
+
+    .info-box h3 {
+
+      color: #e50909;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .info-box p {
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+      color: #555;
+
+    }
+
+
+    /* =====================================
+       FOOTER
+    ====================================== */
+
+    footer {
+
+      margin-top: 70px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #171717,
+          #292929
+        );
+
+      color: white;
+
+      text-align: center;
+
+      padding: 40px 20px;
+
+    }
+
+
+    footer p {
+
+      margin: 10px 0;
+
+      font-size: 14px;
+
+    }
+
+
+    .social-icons {
+
+      margin: 25px 0;
+
+    }
+
+
+    .social-icons a {
+
+      display: inline-block;
+
+      margin: 0 8px;
+
+      padding: 8px;
+
+      border-radius: 50%;
+
+      transition:
+        transform 0.3s,
+        background 0.3s;
+
+    }
+
+
+    .social-icons a:hover {
+
+      background: #ffd000;
+
+      transform:
+        translateY(-7px)
+        rotate(8deg);
+
+    }
+
+
+    .social-icons img {
+
+      width: 45px;
+
+      height: 45px;
+
+      object-fit: contain;
+
+    }
+
+
+    footer a {
+
+      color: #ffd000;
+
+      text-decoration: none;
+
+    }
+
+
+    footer a:hover {
+
+      color: #ff6b00;
+
+      text-decoration: underline;
+
+    }
+
+
+    /* =====================================
+       BOTÓN ARRIBA
+    ====================================== */
+
+    .arriba {
+
+      position: fixed;
+
+      right: 25px;
+
+      bottom: 25px;
+
+      width: 50px;
+
+      height: 50px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      background: #e50909;
+
+      color: white;
+
+      border-radius: 50%;
+
+      text-decoration: none;
+
+      font-size: 22px;
+
+      box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.30);
+
+      transition: 0.3s;
+
+      z-index: 999;
+
+    }
+
+
+    .arriba:hover {
+
+      background: #ffd000;
+
+      color: #222;
+
+      transform:
+        translateY(-5px);
+
+    }
+
+
+    /* =====================================
+       RESPONSIVE
+    ====================================== */
+
+    @media (max-width: 768px) {
+
+      .menu ul {
+
+        flex-direction: column;
+
+      }
+
+
+      .menu a {
+
+        width: 100%;
+
+      }
+
+
+      .titulo h1 {
+
+        font-size: 2.8rem;
+
+      }
+
+
+      .intro {
+
+        padding: 25px 15px;
+
+      }
+
+
+      .grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .app-section {
+
+        padding: 35px 20px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body id="inicio">
+
+
+  <!-- =====================================
+       MENÚ
+  ====================================== -->
+
+  <nav class="menu">
+
+    <ul>
+
+      <li>
+
+        <a href="Inicio.html">
+
+          🏠 Inicio
+
+        </a>
+
+      </li>
+
+
+      <li>
+
+        <a href="Nombre_Proyecto.html">
+
+          <img
+            src="Inicio/LOGO.jpg"
+            class="logo-menu"
+            alt="Logo PUNTUALIX"
+          >
+
+          <span>
+            PUNTUALIX
+          </span>
+
+        </a>
+
+      </li>
+
+
+      <li>
+
+        <a href="Imagen_Corporativa.html">
+
+          🎨 Imagen Corporativa
+
+        </a>
+
+      </li>
+
+
+      <li>
+
+        <a href="Contenidos.html">
+
+          📚 Contenidos
+
+        </a>
+
+      </li>
+
+
+      <li>
+
+        <a href="Quienes_Somos.html">
+
+          👥 Quiénes Somos
+
+        </a>
+
+      </li>
+
+
+      <li>
+
+        <a href="Contactanos.html">
+
+          📩 Contáctanos
+
+        </a>
+
+      </li>
+
+    </ul>
+
+  </nav>
+
+
+  <!-- =====================================
+       TÍTULO
+  ====================================== -->
+
+  <section class="titulo">
+
+    <h1>
+      CONTENIDOS
+    </h1>
+
+    <p>
+      
+    </p>
+
+  </section>
+
+
+  <!-- =====================================
+       INTRODUCCIÓN
+  ====================================== -->
+
+  <section class="intro">
+
+    <h2>
+      ⏱️ ¿Qué es PUNTUALIX?
+    </h2>
+
+    <p>
+
+      PUNTUALIX es una aplicación creada para
+      facilitar el control y seguimiento de las
+      llegadas tarde de los estudiantes.
+
+      <br><br>
+
+      La aplicación busca organizar el registro
+      de la puntualidad y facilitar el seguimiento
+      de la información de manera rápida,
+      sencilla y organizada.
+
+    </p>
+
+  </section>
+
+
+  <!-- =====================================
+       CARACTERÍSTICAS
+  ====================================== -->
+
+  <section class="contenidos">
+
+    <h2>
+      🚀 Características del proyecto
+    </h2>
+
+
+    <div class="grid">
+
+
+      <div class="tarjeta">
+
+        <div class="icono">
+          ⏰
+        </div>
+
+        <h3>
+          Control de llegadas
+        </h3>
+
+        <p>
+          Permite llevar un registro organizado
+          de las llegadas tarde de los estudiantes.
+        </p>
+
+      </div>
+
+
+      <div class="tarjeta">
+
+        <div class="icono">
+          📊
+        </div>
+
+        <h3>
+          Seguimiento
+        </h3>
+
+        <p>
+          Facilita la consulta y seguimiento
+          de los registros de puntualidad.
+        </p>
+
+      </div>
+
+
+      <div class="tarjeta">
+
+        <div class="icono">
+          📱
+        </div>
+
+        <h3>
+          Fácil de utilizar
+        </h3>
+
+        <p>
+          Su diseño busca ofrecer una experiencia
+          sencilla y práctica para los usuarios.
+        </p>
+
+      </div>
+
+
+      <div class="tarjeta">
+
+        <div class="icono">
+          🎯
+        </div>
+
+        <h3>
+          Organización
+        </h3>
+
+        <p>
+          Ayuda a organizar la información
+          relacionada con la puntualidad.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       APLICACIÓN
+  ====================================== -->
+
+  <section class="app-section">
+
+    <h2>
+      🚀 ¡Conoce PUNTUALIX!
+    </h2>
+
+
+    <p>
+
+      Ingresa a nuestra aplicación y conoce
+      cómo funciona el sistema de control
+      de llegadas tarde desarrollado para
+      el proyecto PUNTUALIX.
+
+    </p>
+
+
+    <a
+      href="https://puntualix-smart-check.base44.app"
+      target="_blank"
+      class="app-button"
+    >
+
+      🌐 ABRIR APLICACIÓN
+
+    </a>
+
+  </section>
+
+
+  <!-- =====================================
+       INFORMACIÓN ADICIONAL
+  ====================================== -->
+
+  <section class="info">
+
+
+    <div class="info-box">
+
+      <h3>
+        👨‍🎓 Estudiantes
+      </h3>
+
+      <p>
+
+        PUNTUALIX permite realizar un mejor
+        seguimiento de la puntualidad de
+        los estudiantes.
+
+      </p>
+
+    </div>
+
+
+    <div class="info-box">
+
+      <h3>
+        🏫 Colegio
+      </h3>
+
+      <p>
+
+        La propuesta busca contribuir a una
+        gestión más organizada de las
+        llegadas tarde.
+
+      </p>
+
+    </div>
+
+
+    <div class="info-box">
+
+      <h3>
+        💻 Tecnología
+      </h3>
+
+      <p>
+
+        El proyecto utiliza una solución
+        digital para facilitar el manejo
+        de la información.
+
+      </p>
+
+    </div>
+
+
+  </section>
+
+
+  <!-- =====================================
+       FOOTER
+  ====================================== -->
+
+  <footer>
+
+    <p>
+
+      Conoce más de nosotros...
+
+      <strong>
+        ¡Visita nuestras Redes Sociales!
+      </strong>
+
+    </p>
+
+
+    <div class="social-icons">
+
+
+      <a
+        href="https://www.facebook.com/?locale=es_LA"
+        target="_blank"
+      >
+
+        <img
+          src="Redes Sociales/facebook.png"
+          alt="Facebook"
+        >
+
+      </a>
+
+
+      <a
+        href="https://www.google.com/?hl=es"
+        target="_blank"
+      >
+
+        <img
+          src="Redes Sociales/Google.png"
+          alt="Google"
+        >
+
+      </a>
+
+
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+      >
+
+        <img
+          src="Redes Sociales/Instagram.png"
+          alt="Instagram"
+        >
+
+      </a>
+
+
+      <a
+        href="https://identity.flickr.com/login"
+        target="_blank"
+      >
+
+        <img
+          src="Redes Sociales/Whatsapp.png"
+          alt="WhatsApp"
+        >
+
+      </a>
+
+
+    </div>
+
+
+    <p>
+
+      &copy; 2026 - Educación Media
+      del Colegio Venecia IED.
+
+      Todos los derechos reservados.
+
+      |
+
+      <a
+        href="https://www.mintic.gov.co/portal/inicio/Secciones-auxiliares/Politicas/2627:Politicas-de-Privacidad-y-Condiciones-de-Uso"
+        target="_blank"
+      >
+        Política de Privacidad
+      </a>
+
+      |
+
+      <a
+        href="https://www.sic.gov.co/politica-privacidad"
+        target="_blank"
+      >
+        Términos y Condiciones
+      </a>
+
+    </p>
+
+  </footer>
+
+
+  <!-- =====================================
+       BOTÓN ARRIBA
+  ====================================== -->
+
+  <a
+    href="#inicio"
+    class="arriba"
+    title="Volver arriba"
+  >
+
+    ↑
+
+  </a>
+
+
+</body>
+
+</html>
+```
