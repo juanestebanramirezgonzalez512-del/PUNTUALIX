@@ -1,0 +1,1304 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contáctanos | PUNTUALIX</title>
+
+  <link rel="icon" href="Inicio/Icono.png" type="image/x-icon">
+
+  <!-- FUENTE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+  <style>
+
+    /* =====================================
+       CONFIGURACIÓN GENERAL
+    ====================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      font-family: 'Poppins', Arial, sans-serif;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff8d6,
+          #ffffff,
+          #ffe5d0
+        );
+
+      color: #222;
+
+      overflow-x: hidden;
+
+    }
+
+
+    /* =====================================
+       FONDO ANIMADO
+    ====================================== */
+
+    body::before,
+    body::after {
+
+      content: "";
+
+      position: fixed;
+
+      width: 350px;
+
+      height: 350px;
+
+      border-radius: 50%;
+
+      filter: blur(80px);
+
+      opacity: 0.30;
+
+      z-index: -1;
+
+      animation:
+        moverFondo 8s infinite alternate ease-in-out;
+
+    }
+
+
+    body::before {
+
+      background: #ffee01;
+
+      top: -120px;
+
+      left: -100px;
+
+    }
+
+
+    body::after {
+
+      background: #ffd804;
+
+      bottom: -120px;
+
+      right: -100px;
+
+      animation-delay: 2s;
+
+    }
+
+
+    @keyframes moverFondo {
+
+      from {
+        transform: translate(0, 0);
+      }
+
+      to {
+        transform: translate(80px, 50px);
+      }
+
+    }
+
+
+    /* =====================================
+       MENÚ
+    ====================================== */
+
+    .menu {
+
+      background:
+        linear-gradient(
+          90deg,
+           #0931e5,
+          #f52c12,
+          #1000f7
+        );
+
+      padding: 14px 20px;
+
+      text-align: center;
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+      box-shadow:
+        0 5px 20px rgba(0,0,0,0.20);
+
+      animation:
+        aparecerMenu 0.8s ease;
+
+    }
+
+
+    @keyframes aparecerMenu {
+
+      from {
+
+        transform: translateY(-100%);
+
+        opacity: 0;
+
+      }
+
+      to {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+      }
+
+    }
+
+
+    .menu ul {
+
+      list-style: none;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      gap: 7px;
+
+      flex-wrap: wrap;
+
+    }
+
+
+    .menu li {
+
+      list-style: none;
+
+    }
+
+
+    .menu a {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 7px;
+
+      text-decoration: none;
+
+      color: white;
+
+      font-weight: 600;
+
+      font-size: 14px;
+
+      padding: 10px 16px;
+
+      border-radius: 25px;
+
+      transition:
+        all 0.3s ease;
+
+    }
+
+
+    .menu a:hover {
+
+      background: #ffd804;
+
+      color: #222;
+
+      transform:
+        translateY(-3px)
+        scale(1.05);
+
+      box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.25);
+
+    }
+
+
+    /* =====================================
+       LOGO
+    ====================================== */
+
+    .logo-menu {
+
+      width: 30px;
+
+      height: 30px;
+
+      object-fit: contain;
+
+      border-radius: 50%;
+
+      background: white;
+
+      padding: 2px;
+
+      transition:
+        transform 0.5s ease;
+
+    }
+
+
+    .menu a:hover .logo-menu {
+
+      transform:
+        rotate(360deg)
+        scale(1.20);
+
+    }
+
+
+    /* =====================================
+       TÍTULO
+    ====================================== */
+
+    .titulo {
+
+      text-align: center;
+
+      margin:
+        40px 20px 20px;
+
+      animation:
+        aparecer 1s ease;
+
+    }
+
+
+    .titulo h1 {
+
+      font-size:
+        clamp(2.5rem, 6vw, 5rem);
+
+      font-weight: 800;
+
+      background:
+        linear-gradient(
+          90deg,
+          #090de5,
+          #0011ff,
+          #ffd000
+        );
+
+      -webkit-background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+
+      letter-spacing: 3px;
+
+    }
+
+
+    .titulo p {
+
+      font-size: 18px;
+
+      font-weight: 600;
+
+      color: #444;
+
+      margin-top: 5px;
+
+    }
+
+
+    @keyframes aparecer {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(30px);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0);
+
+      }
+
+    }
+
+
+    /* =====================================
+       PRESENTACIÓN
+    ====================================== */
+
+    .presentacion {
+
+      width: min(90%, 900px);
+
+      margin: 35px auto;
+
+      padding: 35px;
+
+      text-align: center;
+
+      background:
+        rgba(255,255,255,0.88);
+
+      backdrop-filter: blur(10px);
+
+      border-radius: 25px;
+
+      box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.12);
+
+    }
+
+
+    .presentacion h2 {
+
+      color: #0918e5;
+
+      font-size: 28px;
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .presentacion p {
+
+      line-height: 1.8;
+
+      font-size: 16px;
+
+    }
+
+
+    /* =====================================
+       GALERÍA
+    ====================================== */
+
+    .gallery-container {
+
+      width: min(90%, 1050px);
+
+      margin: 45px auto 20px;
+
+      position: relative;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      min-height: 350px;
+
+    }
+
+
+    .gallery-container img {
+
+      max-width: 100%;
+
+      max-height: 600px;
+
+      width: auto;
+
+      height: auto;
+
+      display: none;
+
+      border-radius: 22px;
+
+      border: 6px solid white;
+
+      box-shadow:
+        0 15px 35px
+        rgba(0,0,0,0.22);
+
+      object-fit: contain;
+
+      animation:
+        aparecerImagen 0.6s ease;
+
+    }
+
+
+    .gallery-container img.active {
+
+      display: block;
+
+    }
+
+
+    @keyframes aparecerImagen {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          scale(0.94)
+          translateY(15px);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          scale(1)
+          translateY(0);
+
+      }
+
+    }
+
+
+    /* =====================================
+       BOTONES GALERÍA
+    ====================================== */
+
+    .gallery-buttons {
+
+      text-align: center;
+
+      margin: 25px auto 50px;
+
+    }
+
+
+    .gallery-buttons button {
+
+      cursor: pointer;
+
+      width: 45px;
+
+      height: 45px;
+
+      margin: 6px;
+
+      border: none;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #091fe5,
+          #e5ff00
+        );
+
+      color: white;
+
+      font-weight: 700;
+
+      font-size: 15px;
+
+      box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.18);
+
+      transition:
+        all 0.3s ease;
+
+    }
+
+
+    .gallery-buttons button:hover {
+
+      transform:
+        translateY(-5px)
+        scale(1.1);
+
+      background:
+        linear-gradient(
+          135deg,
+          #0400ff,
+          #ff0000
+        );
+
+      color: #222;
+
+    }
+
+
+    .gallery-buttons button.active {
+
+      background:
+        #ffd000;
+
+      color: #222;
+
+      transform:
+        scale(1.12);
+
+    }
+
+
+    /* =====================================
+       TARJETAS DE CONTACTO
+    ====================================== */
+
+    .contacto-info {
+
+      width: min(90%, 1000px);
+
+      margin: 40px auto 60px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+
+    }
+
+
+    .contacto-card {
+
+      background: white;
+
+      padding: 30px 20px;
+
+      border-radius: 22px;
+
+      text-align: center;
+
+      box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.12);
+
+      transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+
+      position: relative;
+
+      overflow: hidden;
+
+    }
+
+
+    .contacto-card::before {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 6px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #e50909,
+          #ff7200,
+          #ffd000
+        );
+
+    }
+
+
+    .contacto-card:hover {
+
+      transform:
+        translateY(-10px);
+
+      box-shadow:
+        0 18px 35px
+        rgba(0,0,0,0.18);
+
+    }
+
+
+    .contacto-icon {
+
+      font-size: 45px;
+
+      margin-bottom: 12px;
+
+    }
+
+
+    .contacto-card h3 {
+
+      color: #e50909;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .contacto-card p {
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+    }
+
+
+    /* =====================================
+       FOOTER
+    ====================================== */
+
+    footer {
+
+      margin-top: 70px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #171717,
+          #292929
+        );
+
+      color: white;
+
+      text-align: center;
+
+      padding: 40px 20px;
+
+    }
+
+
+    footer p {
+
+      margin: 10px 0;
+
+      font-size: 14px;
+
+    }
+
+
+    .social-icons {
+
+      margin: 25px 0;
+
+    }
+
+
+    .social-icons a {
+
+      display: inline-block;
+
+      margin: 0 8px;
+
+      padding: 8px;
+
+      border-radius: 50%;
+
+      transition:
+        transform 0.3s,
+        background 0.3s;
+
+    }
+
+
+    .social-icons a:hover {
+
+      background: #ffd000;
+
+      transform:
+        translateY(-7px)
+        rotate(8deg);
+
+    }
+
+
+    .social-icons img {
+
+      width: 45px;
+
+      height: 45px;
+
+      object-fit: contain;
+
+    }
+
+
+    footer a {
+
+      color: #ffd000;
+
+      text-decoration: none;
+
+    }
+
+
+    footer a:hover {
+
+      color: #ff6b00;
+
+      text-decoration: underline;
+
+    }
+
+
+    /* =====================================
+       BOTÓN VOLVER ARRIBA
+    ====================================== */
+
+    .arriba {
+
+      position: fixed;
+
+      right: 25px;
+
+      bottom: 25px;
+
+      width: 50px;
+
+      height: 50px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      background: #e50909;
+
+      color: white;
+
+      border-radius: 50%;
+
+      text-decoration: none;
+
+      font-size: 22px;
+
+      box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.30);
+
+      transition: 0.3s;
+
+      z-index: 999;
+
+    }
+
+
+    .arriba:hover {
+
+      background: #ffd000;
+
+      color: #222;
+
+      transform:
+        translateY(-5px);
+
+    }
+
+
+    /* =====================================
+       RESPONSIVE
+    ====================================== */
+
+    @media (max-width: 768px) {
+
+      .menu ul {
+
+        flex-direction: column;
+
+      }
+
+
+      .menu a {
+
+        width: 100%;
+
+      }
+
+
+      .titulo h1 {
+
+        font-size: 2.8rem;
+
+      }
+
+
+      .presentacion {
+
+        padding: 25px 15px;
+
+      }
+
+
+      .gallery-container {
+
+        min-height: 200px;
+
+      }
+
+
+      .contacto-info {
+
+        grid-template-columns: 1fr;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body id="inicio">
+
+
+  <!-- =====================================
+       MENÚ PRINCIPAL
+  ====================================== -->
+
+  <nav class="menu">
+
+    <ul>
+
+      <li>
+        <a href="Inicio.html">
+          🏠 Inicio
+        </a>
+      </li>
+
+
+      <li>
+
+        <a href="Nombre_Proyecto.html">
+
+          <img
+            src="Inicio/LOGO.JPG"
+            class="logo-menu"
+            alt="Logo PUNTUALIX"
+          >
+
+          <span>
+            PUNTUALIX
+          </span>
+
+        </a>
+
+      </li>
+
+
+      <li>
+        <a href="Imagen_Corporativa.html">
+          🎨 Imagen Corporativa
+        </a>
+      </li>
+
+
+      <li>
+        <a href="Contenidos.html">
+          📚 Contenidos
+        </a>
+      </li>
+
+
+      <li>
+        <a href="Quienes_Somos.html">
+          👥 Quiénes Somos
+        </a>
+      </li>
+
+
+      <li>
+        <a href="Contactanos.html">
+          📩 Contáctanos
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+
+  <!-- =====================================
+       TÍTULO
+  ====================================== -->
+
+  <section class="titulo">
+
+    <h1>
+      CONTÁCTANOS
+    </h1>
+
+    <p>
+      📩 Conoce más sobre PUNTUALIX
+    </p>
+
+  </section>
+
+
+  <!-- =====================================
+       PRESENTACIÓN
+  ====================================== -->
+
+  <section class="presentacion">
+
+    <h2>
+      ¡Estamos aquí para escucharte! 👋
+    </h2>
+
+    <p>
+
+      En PUNTUALIX nos interesa conocer tus ideas,
+      opiniones y sugerencias sobre nuestro proyecto.
+
+      Explora nuestras imágenes y conoce un poco más
+      sobre el proceso y desarrollo de nuestra propuesta.
+
+    </p>
+
+  </section>
+
+
+  <!-- =====================================
+       GALERÍA
+  ====================================== -->
+
+  <div class="gallery-container">
+
+    <img
+      src="Contactanos/Imagen1.jpg"
+      class="gallery active"
+      alt="Imagen 1"
+    >
+
+    <img
+      src="Contactanos/Imagen2.jpg"
+      class="gallery"
+      alt="Imagen 2"
+    >
+
+    <img
+      src="Contactanos/Imagen3.webp"
+      class="gallery"
+      alt="Imagen 3"
+    >
+
+    <img
+      src="Contactanos/Imagen4.jpg"
+      class="gallery"
+      alt="Imagen 4"
+    >
+
+    <img
+      src="Contactanos/Marcos-Quienes somos.jpg"
+      class="gallery"
+      alt="Imagen 5"
+    >
+
+    <img
+      src="Contactanos/Proceso-Logotipo.jpg"
+      class="gallery"
+      alt="Imagen 6"
+    >
+
+  </div>
+
+
+  <!-- =====================================
+       BOTONES
+  ====================================== -->
+
+  <div class="gallery-buttons">
+
+    <button onclick="mostrarImagen(0)">1</button>
+
+    <button onclick="mostrarImagen(1)">2</button>
+
+    <button onclick="mostrarImagen(2)">3</button>
+
+    <button onclick="mostrarImagen(3)">4</button>
+
+    <button onclick="mostrarImagen(4)">5</button>
+
+    <button onclick="mostrarImagen(5)">6</button>
+
+  </div>
+
+
+  <!-- =====================================
+       INFORMACIÓN
+  ====================================== -->
+
+  <section class="contacto-info">
+
+
+    <div class="contacto-card">
+
+      <div class="contacto-icon">
+        🏫
+      </div>
+
+      <h3>
+        Colegio
+      </h3>
+
+      <p>
+        Colegio Venecia IED
+      </p>
+
+    </div>
+
+
+    <div class="contacto-card">
+
+      <div class="contacto-icon">
+        💻
+      </div>
+
+      <h3>
+        Proyecto
+      </h3>
+
+      <p>
+        PUNTUALIX - Control y seguimiento
+        de llegadas tarde.
+      </p>
+
+    </div>
+
+
+    <div class="contacto-card">
+
+      <div class="contacto-icon">
+        ⏰
+      </div>
+
+      <h3>
+        Nuestro propósito
+      </h3>
+
+      <p>
+        Aprovechar la tecnología para mejorar
+        la organización y la puntualidad.
+      </p>
+
+    </div>
+
+
+  </section>
+
+
+  <!-- =====================================
+       FOOTER
+  ====================================== -->
+
+  <footer>
+
+    <p>
+
+      Conoce más de nosotros...
+
+      <strong>
+        ¡Visita nuestras Redes Sociales!
+      </strong>
+
+    </p>
+
+
+    <div class="social-icons">
+
+
+      <a
+        href="https://www.facebook.com/?locale=es_LA"
+        target="_blank"
+      >
+
+        <img
+          src="Redes Sociales/facebook.png"
+          width="50"
+          height="50"
+          alt="Facebook"
+        >
+
+      </a>
+
+
+      <a
+        href="https://www.google.com/?hl=es"
+        target="_blank"
+      >
+
+        <img
+          src="Redes Sociales/Whatsapp.png"
+          width="50"
+          height="50"
+          alt="Google"
+        >
+
+      </a>
+
+
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+      >
+
+        <img
+          src="Redes Sociales/Instagram.png"
+          width="50"
+          height="50"
+          alt="Instagram"
+        >
+
+      </a>
+
+
+      <a
+        href="https://identity.flickr.com/login"
+        target="_blank"
+      >
+
+        <img
+          src="Redes Sociales/Redes-Sociales---Flickr.png"
+          width="50"
+          height="50"
+          alt="Flickr"
+        >
+
+      </a>
+
+
+    </div>
+
+
+    <br>
+
+
+    <p>
+
+      &copy; 2026 - Educación Media
+      del Colegio Venecia IED.
+
+      Todos los derechos reservados.
+
+      |
+
+      <a
+        href="https://www.mintic.gov.co/portal/inicio/Secciones-auxiliares/Politicas/2627:Politicas-de-Privacidad-y-Condiciones-de-Uso"
+        target="_blank"
+      >
+        Política de Privacidad
+      </a>
+
+      |
+
+      <a
+        href="https://www.sic.gov.co/politica-privacidad"
+        target="_blank"
+      >
+        Términos y Condiciones
+      </a>
+
+    </p>
+
+  </footer>
+
+
+  <!-- =====================================
+       BOTÓN VOLVER ARRIBA
+  ====================================== -->
+
+  <a
+    href="#inicio"
+    class="arriba"
+    title="Volver arriba"
+  >
+    ↑
+  </a>
+
+
+  <!-- =====================================
+       JAVASCRIPT
+  ====================================== -->
+
+  <script>
+
+    let galleryIndex = 0;
+
+    const galleryImages =
+      document.querySelectorAll(".gallery");
+
+    const galleryBtns =
+      document.querySelectorAll(
+        ".gallery-buttons button"
+      );
+
+
+    function mostrarImagen(n) {
+
+      galleryImages.forEach(
+        img => img.classList.remove("active")
+      );
+
+      galleryBtns.forEach(
+        btn => btn.classList.remove("active")
+      );
+
+
+      galleryIndex =
+        (n + galleryImages.length)
+        % galleryImages.length;
+
+
+      galleryImages[galleryIndex]
+        .classList.add("active");
+
+
+      galleryBtns[galleryIndex]
+        .classList.add("active");
+
+    }
+
+
+    /* Primer botón activo */
+
+    galleryBtns[0]
+      .classList.add("active");
+
+  </script>
+
+
+</body>
+
+</html>
+```
